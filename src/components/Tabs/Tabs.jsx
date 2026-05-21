@@ -4,7 +4,7 @@ export const Tabs = ({ tabs, activeTabId, onTabSelected }) => {
   return (
     <div className="section">
       <h1 className="title">Selected tab is {activeTab.title}</h1>
-      <div data-cy="TabsComponent">
+      <div className="tabs" data-cy="TabsComponent">
         <ul>
           {tabs.map(tab => (
             <li
@@ -22,10 +22,10 @@ export const Tabs = ({ tabs, activeTabId, onTabSelected }) => {
             </li>
           ))}
         </ul>
+      </div>
 
-        <div className="block" data-cy="TabContent">
-          {activeTab.content}
-        </div>
+      <div className="block" data-cy="TabContent">
+        {activeTab.content}
       </div>
     </div>
   );
